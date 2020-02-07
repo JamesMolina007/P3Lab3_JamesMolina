@@ -4,6 +4,9 @@
 
 using namespace std;
 
+triangulo :: triangulo(){
+}
+
 triangulo :: triangulo( double lado1, double lado2, double lado3 ){
 	l1 = lado1;
 	l2 = lado2;

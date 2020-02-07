@@ -3,6 +3,8 @@
 
 using namespace std;
 
+circulo :: circulo(){
+}
 
 circulo :: circulo( float r ){
 	diametro = 2*r;

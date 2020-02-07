@@ -10,6 +10,6 @@ class circulo{
 		circulo( float r );
 		float perimetro(){ return circunferencia; };
 		float areacirculo(){ return area; };
-		
+		double getRadio(){ return radio; };	
 
 };

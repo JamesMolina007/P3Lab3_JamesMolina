@@ -80,7 +80,7 @@ int main(){
 				double altura;
 				cout << "Ingrese la altura de la piramide: ";
 				cin >> altura;
-				piramide piramid( lado22, altura );
+				piramide piramid( t2, altura );
 				cout << "El volumen de la piramide es: " <<  piramid.calculo_volumen() << endl << endl;
 			       }break;
 			case 5:{
@@ -88,7 +88,7 @@ int main(){
 				cout << "Ingrese el radio del circulo: ";
 				cin >> radio2;
 				circulo c ( radio2 );
-				esfera e ( radio2 );
+				esfera e ( c );
 				cout << "El volumen de la esfera es: " << e.calculo_volumen() << endl << endl;
 			       }break;
 		}		

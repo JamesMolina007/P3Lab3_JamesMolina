@@ -1,6 +1,9 @@
 #include <iostream>
 #include "triangulo.hpp"
 #include "circulo.hpp"
+#include "piramide.hpp"
+#include "piramide.hpp"
+#include "esfera.hpp"
 
 using namespace std;
 
@@ -36,11 +39,12 @@ int main(){
 		cout << "5- Calcular volumen de esfera " << endl;	
 		cout << "Ingrese la opcion: ";
 		cin >> opcion;
+		cout << endl << endl;
 		switch( opcion ){
-			case 1:
+			case 1:{
 				datos_sucesion();
-				break;
-			case 2:
+			       }break;
+			case 2:{
 				double lado1, lado2, lado3;
 				cout << "Ingrese lado 1: ";
 				cin >> lado1;
@@ -53,17 +57,40 @@ int main(){
 				double altura =  t.calculoaltura();
 				cout << "El area del triangulo es: " << area << endl;
 				cout << "La altura del triangulo es: " << altura << endl << endl;
-				break;
-			case 3:
-				double radio;
+			       }break;
+			case 3:{
+				float radio;
 				cout <<  "Ingrese el radio del circulo: ";
 				cin >> radio;
-				circulo c( r );
-				double perimetro = c.perimetro();
-			        double area = c.calculo_area();
-				cout << "El area del circulo es: " << area << endl;
+				circulo c( radio );
+				float perimetro = c.perimetro();
+			        float area_c = c.areacirculo();
+				cout << "El area del circulo es: " << area_c << endl;
 				cout << "El perimetro del circulo es: " << perimetro << endl << endl;
-				break;	
+			       }break;	
+			case 4:{
+				double lado11, lado22, lado33;
+				cout << "Ingrese lado 1: ";
+				cin >> lado11;
+				cout << "Ingrese base: ";
+				cin >> lado22;
+				cout << "Ingrese lado 3: ";
+				cin >> lado33;
+				triangulo t2( lado11, lado22, lado33 );
+				double altura;
+				cout << "Ingrese la altura de la piramide: ";
+				cin >> altura;
+				piramide piramid( lado22, altura );
+				cout << "El volumen de la piramide es: " <<  piramid.calculo_volumen() << endl << endl;
+			       }break;
+			case 5:{
+				float radio2;
+				cout << "Ingrese el radio del circulo: ";
+				cin >> radio2;
+				circulo c ( radio2 );
+				esfera e ( radio2 );
+				cout << "El volumen de la esfera es: " << e.calculo_volumen() << endl << endl;
+			       }break;
 		}		
 	}
 

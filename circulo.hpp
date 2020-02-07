@@ -2,14 +2,14 @@
 
 class circulo{
 	private:
-		double radio, diametro, circunferencia, area;
+		float radio, diametro, circunferencia, area;
+		void calculo_area();
+		void calculo_circunferencia();
 	public:
 		circulo();
-		circulo( double r );
-		void calculo_circunferencia();
-		double perimetro(){ return circunferencia; };
-		void calculo_area();
-		double areacirculo(){ return area; };
+		circulo( float r );
+		float perimetro(){ return circunferencia; };
+		float areacirculo(){ return area; };
 		
 
-}
+};

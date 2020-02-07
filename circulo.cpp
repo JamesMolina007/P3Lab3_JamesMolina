@@ -3,12 +3,12 @@
 
 using namespace std;
 
-circulo :: circulo(){
-}
 
-circulo :: circulo( int r ){
+circulo :: circulo( float r ){
 	diametro = 2*r;
+	radio = r;
 	calculo_circunferencia();
+	calculo_area();
 		
 }
 
